@@ -3,18 +3,16 @@
 }
 
 .header-container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
-
-.header-container h1 {
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
+.header-container img {
+  width: 100px;
 }
 
 .header-menu {
@@ -24,26 +22,58 @@
   gap: 40px;
 }
 .header-menu a {
-  display: block;
+  padding: 16px 0;
+  display: inline-block;
+  position: relative;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-size: 1.125em;
   font-weight: 500;
-  padding: 15px 0;
-  position: relative;
 }
 .header-menu a::after {
   content: "";
   display: block;
-  width: 0px;
   height: 2px;
+  width: 0px;
   background: #b3b3b3;
   position: absolute;
-  margin-top: 2px;
-  transition: 0.4s;
+  transition: 0.3s;
+  position: absolute;
 }
 .header-menu a:hover,
 a:hover::after {
   width: 100%;
   color: #b3b3b3;
+}
+@media (max-width: 739px) {
+  .header-menu a {
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+  .header-menu a:hover {
+    background: #2e2e2e;
+  }
+  .header-menu a:hover::after {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .header-container img {
+    margin-bottom: 20px;
+  }
+  .header-menu {
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .header-menu a:hover {
+    background: #6a6a6a;
+  }
+  .header-menu a::after {
+    display: none;
+  }
 }

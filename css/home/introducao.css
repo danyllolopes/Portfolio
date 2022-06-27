@@ -1,16 +1,41 @@
 .intro-bg {
   background: #121212;
-  height: calc(100vh - 92px);
 }
 .intro-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 980px;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0 0 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.intro-info {
-  align-self: center;
+
+.intro-info h1 {
+  font-family: "Poppings", sans-serif;
+  font-size: 2.625em;
+  color: #ffffff;
+  max-width: 15ch;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.intro-info h1::after {
+  content: " | ";
+  margin-left: 1px;
+  opacity: 1;
+  animation: pisca 1s infinite;
+}
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 .intro-info p:first-child {
   font-family: "Poppings", sans-serif;
@@ -19,16 +44,68 @@
   line-height: 1.4;
   margin-bottom: 15px;
 }
-.intro-info h1 {
-  font-family: "Poppings", sans-serif;
-  font-size: 2.625em;
-  color: #ffffff;
-  max-width: 15ch;
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-.intro-info p:last-child {
+.intro-info-p {
   font-family: "Poppings", sans-serif;
   color: #b3b3b3;
   font-size: 1.5em;
+}
+.animation {
+  animation: cursor 500ms steps(40) infinite normal,
+    typing 4s steps(40) 1s normal;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20em;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: #ffffff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.rocket {
+  position: relative;
+  left: 260px;
+  top: -60px;
+  animation: animate alternate 0.2s ease infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+.rocket::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -12px;
+  transform: translateX(-50%);
+  transform: rotate(50deg);
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(#ff8800, transparent);
+}
+.rocket::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -12px;
+  transform: translateX(-50%);
+  transform: rotate(50deg);
+  width: 10px;
+  height: 50px;
+  background: linear-gradient(#ff8800, transparent);
+  filter: blur(20px);
 }

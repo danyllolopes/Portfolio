@@ -7,13 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <title>Portfolio</title>
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
 </head>
 
 <body>
 
   <header class="header-bg">
-    <div class="header-container">
-      <h1>Portifolio</h1>
+    <div class="header-container fadeInDown" data-anime="200">
+      <img src="./img/logo.svg" alt="Logo">
       <nav>
         <ul class="header-menu">
           <li><a href="#sobre">Sobre</a></li>
@@ -28,11 +31,14 @@
   <main class="intro-bg">
     <div class="intro-container">
       <section class="intro-info">
-        <p>Olá, me chamo <br>Danyllo</p>
-        <h1>Desenvolvedor Front-end & UI Design</h1>
-        <p>reiventando conteudo</p>
+        <p class="fadeInDown" data-anime="200">Olá 👋, me chamo Danyllo</p>
+        <h1 class="fadeInDown " data-anime="600">Desenvolvedor Front-end / UI Design.</h1>
+        <p class="fadeInDown intro-info-p" data-anime="800">reiventando conteudo</p>
+        <div class="rocket">
+          <img src="./img/icons8-foguete-50.png" alt="">
+        </div>
       </section>
-      <section class="intro-img">
+      <section class="intro-img fadeInDown" data-anime="800">
         <img src="./img/intro-img.svg" alt="Introdução">
       </section>
     </div>
@@ -103,7 +109,8 @@
   <footer class="footer">
     <p> © Todos os direitos reservados</p>
   </footer>
-
+  </footer>
+  <script src="./js/pluguins/simple-anime.js"></script>
   <script type="module" src="./js/script.js"></script>
 </body>
 

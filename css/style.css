@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700;900&family=Merriweather:ital,wght@1,900&family=Nunito:wght@400;500;600&family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap");
+
+@import "./resete.css";
+
+@import "./home/header.css";
+@import "./home/introducao.css";
+@import "./home/sobre.css";
+@import "./home/projetos.css";
+@import "./home/contato.css";
+@import "./home/footer.css";

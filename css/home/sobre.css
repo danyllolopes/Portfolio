@@ -1,0 +1,30 @@
+.sobre-bg {
+  background: #f7f7f7;
+  height: 100vh;
+}
+
+.sobre-bg h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3.875em;
+  color: 121212;
+  line-height: 1.4;
+  text-align: center;
+  padding: 60px 0 0 0;
+}
+.sobre-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
+}
+.sobre-info {
+  flex: 1;
+  align-self: center;
+  font-family: "Roboto", sans-serif;
+  color: #5a5a5a;
+  font-size: 1.3em;
+  line-height: 1.4;
+  max-width: 80ch;
+}

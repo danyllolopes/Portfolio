@@ -1,0 +1,34 @@
+.intro-bg {
+  background: #121212;
+  height: calc(100vh - 92px);
+}
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
+}
+.intro-info {
+  align-self: center;
+}
+.intro-info p:first-child {
+  font-family: "Poppings", sans-serif;
+  color: #b3b3b3;
+  font-size: 2em;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.intro-info h1 {
+  font-family: "Poppings", sans-serif;
+  font-size: 2.625em;
+  color: #ffffff;
+  max-width: 15ch;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.intro-info p:last-child {
+  font-family: "Poppings", sans-serif;
+  color: #b3b3b3;
+  font-size: 1.5em;
+}

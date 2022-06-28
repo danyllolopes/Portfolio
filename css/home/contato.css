@@ -30,6 +30,7 @@
 }
 .contato-icones a {
   display: inline-block;
+  padding: 5px;
 }
 
 .contato-icones svg {
@@ -43,7 +44,7 @@
 #instagram:hover,
 #github:hover {
   fill: #ffbb00;
-  animation: icons 0.4s normal;
+  animation: icons 0.4s normal both;
   transition: 0.3s;
 }
 
@@ -59,15 +60,29 @@
   .contato-container {
     padding-top: 60px;
     padding-bottom: 60px;
+    max-width: 250px;
   }
   .contato-container h2 {
     font-size: 2em;
     margin-bottom: 60px;
   }
   .contato-icones {
-    gap: 30px;
+    gap: 0 30px;
+  }
+  .contato-icones a {
+    padding: 0;
   }
   .contato-icones svg {
     width: 40px;
+  }
+  .contato-icones a:hover,
+  #localizacao:hover,
+  #telefone:hover,
+  #linkedin:hover,
+  #email:hover,
+  #instagram:hover,
+  #github:hover {
+    fill: #fff;
+    animation: none;
   }
 }

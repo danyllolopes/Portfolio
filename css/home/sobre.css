@@ -30,6 +30,9 @@
   max-width: 50ch;
 }
 @media (max-width: 900px) {
+  .sobre-bg {
+    height: auto;
+  }
   .sobre-container {
     grid-template-columns: auto auto;
     padding: 40px 10px;
@@ -41,6 +44,7 @@
 @media (max-width: 739px) {
   .sobre-container {
     grid-template-columns: auto;
+    padding: 20px 10px;
   }
   .sobre-img {
     display: none;

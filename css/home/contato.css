@@ -1,6 +1,5 @@
 .contato-bg {
   background: #121212;
-  height: 100vh;
 }
 .contato-container {
   max-width: 960px;
@@ -10,17 +9,17 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .contato-container h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 3.875em;
+  font-size: 2.625em;
   color: #ffffff;
   line-height: 1.4;
   text-align: center;
-  margin-bottom: 160px;
+  margin-bottom: 100px;
 }
 .contato-icones {
   display: flex;
@@ -29,7 +28,46 @@
   align-items: center;
   gap: 60px;
 }
+.contato-icones a {
+  display: inline-block;
+}
 
-.contato-icones img {
-  width: 70px;
+.contato-icones svg {
+  width: 50px;
+}
+.contato-icones a:hover,
+#localizacao:hover,
+#telefone:hover,
+#linkedin:hover,
+#email:hover,
+#instagram:hover,
+#github:hover {
+  fill: #ffbb00;
+  animation: icons 0.4s normal;
+  transition: 0.3s;
+}
+
+@keyframes icons {
+  to {
+    transform: translateY(-20px);
+  }
+  from {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 739px) {
+  .contato-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .contato-container h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+  }
+  .contato-icones {
+    gap: 30px;
+  }
+  .contato-icones svg {
+    width: 40px;
+  }
 }

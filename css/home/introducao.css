@@ -9,8 +9,7 @@
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 10px;
 }
 
 .intro-info h1 {
@@ -37,17 +36,23 @@
     opacity: 0;
   }
 }
-.intro-info p:first-child {
+.intro-info p {
   font-family: "Poppings", sans-serif;
   color: #b3b3b3;
   font-size: 2em;
   line-height: 1.4;
   margin-bottom: 15px;
+  position: relative;
 }
-.intro-info-p {
-  font-family: "Poppings", sans-serif;
-  color: #b3b3b3;
-  font-size: 1.5em;
+.intro-info p::after {
+  content: "";
+  display: block;
+  background: url("../../img/foguete.png") no-repeat center center;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -90px;
+  right: -100px;
 }
 .animation {
   animation: cursor 500ms steps(40) infinite normal,
@@ -70,42 +75,37 @@
     border-right-color: transparent;
   }
 }
-.rocket {
-  position: relative;
-  left: 260px;
-  top: -60px;
-  animation: animate alternate 0.2s ease infinite;
+@media (max-width: 1100px) {
+  .intro-container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .intro-info h1 {
+    text-align: center;
+  }
+  .intro-img {
+    display: none;
+  }
 }
+@media (max-width: 739px) {
+  .intro-info h1 {
+    font-size: 2em;
+  }
 
-@keyframes animate {
-  0%,
-  100% {
-    transform: translateY(-2px);
+  .intro-info p {
+    font-size: 1.5em;
   }
-  50% {
-    transform: translateY(2px);
+  .intro-info p::after {
+    width: 100px;
+    height: 100px;
+    top: -70px;
+    right: -60px;
   }
 }
-.rocket::before {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: -12px;
-  transform: translateX(-50%);
-  transform: rotate(50deg);
-  width: 10px;
-  height: 50px;
-  background: linear-gradient(#ff8800, transparent);
-}
-.rocket::after {
-  content: "";
-  position: absolute;
-  bottom: -30px;
-  left: -12px;
-  transform: translateX(-50%);
-  transform: rotate(50deg);
-  width: 10px;
-  height: 50px;
-  background: linear-gradient(#ff8800, transparent);
-  filter: blur(20px);
+@media (max-width: 400px) {
+  .intro-info p {
+    display: none;
+  }
 }

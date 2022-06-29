@@ -1,6 +1,4 @@
 .sobre-bg {
-  background: #f7f7f7;
-  height: 100vh;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -31,7 +29,8 @@
 }
 @media (max-width: 900px) {
   .sobre-bg {
-    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .sobre-container {
     grid-template-columns: auto auto;

@@ -18,7 +18,7 @@
   <header class="header-bg">
     <div class="header-container fadeInDown" data-anime="200">
       <img src="./img/logo.svg" alt="Logo">
-      <nav>
+      <nav class="js-menu">
         <button data-menu="button" aria-expanded="false" aria-controls="menu"></button>
         <ul class="header-menu" data-menu="list" id="menu">
           <li><a href="#sobre">Sobre</a></li>
@@ -42,7 +42,7 @@
     </div>
   </main>
 
-  <section id="sobre" class="sobre-bg">
+  <section id="sobre" class="sobre-bg js-scroll">
     <h2 class="fadeInDown " data-anime="200">Sobre Mim</h2>
     <div class="sobre-container">
       <div class="sobre-img" class="fadeInLeft " data-anime="1000">
@@ -92,7 +92,7 @@
 
   </section>
 
-  <section id="contato" class="contato-bg">
+  <section id="contato" class="contato-bg js-scroll">
     <div class="contato-container">
       <h2 class="fadeInDown" data-anime="400">Contato</h2>
       <nav>
@@ -151,10 +151,10 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p> © Todos os direitos reservados</p>
+  <footer class="footer ">
+    <p class="js-scroll"> © Todos os direitos reservados</p>
   </footer>
-  </footer>
+
   <script src="./js/pluguins/simple-anime.js"></script>
   <script type="module" src="./js/script.js"></script>
 </body>

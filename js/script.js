@@ -1,5 +1,6 @@
 import { SlideNav } from "./slide.js";
 import initMenuMobile from "./menu-mobile.js";
+import initScrolSuave from "./scrollSuave.js";
 
 const slide = new SlideNav(".slide", ".wrapper");
 slide.init();
@@ -25,3 +26,4 @@ function typeWrite(elemento) {
 }
 typeWrite(title);
 initMenuMobile();
+initScrolSuave();

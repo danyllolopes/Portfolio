@@ -30,13 +30,18 @@
 }
 .contato-icones a {
   display: inline-block;
-  padding: 5px;
-}
 
+  padding: 10px;
+}
+.contato-icones a:hover {
+  transform: scale(1.4);
+  transition: 0.3s;
+}
 .contato-icones svg {
   width: 50px;
+  height: 80px;
 }
-.contato-icones a:hover,
+
 #localizacao:hover,
 #telefone:hover,
 #linkedin:hover,
@@ -44,18 +49,8 @@
 #instagram:hover,
 #github:hover {
   fill: #ffbb00;
-  animation: icons 0.4s normal both;
-  transition: 0.3s;
 }
 
-@keyframes icons {
-  to {
-    transform: translateY(-20px);
-  }
-  from {
-    transform: translateY(0px);
-  }
-}
 @media (max-width: 739px) {
   .contato-container {
     padding-top: 60px;
@@ -72,6 +67,9 @@
   .contato-icones a {
     padding: 0;
   }
+  .contato-icones a:hover {
+    transform: none;
+  }
   .contato-icones svg {
     width: 40px;
   }
@@ -83,6 +81,5 @@
   #instagram:hover,
   #github:hover {
     fill: #fff;
-    animation: none;
   }
 }

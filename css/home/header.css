@@ -110,7 +110,7 @@ a:hover::after {
 }
 @media (max-width: 400px) {
   .header-container {
-    flex-direction: column;
+    flex-direction: row;
   }
   .header-container img {
     margin-bottom: 20px;

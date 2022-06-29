@@ -90,6 +90,9 @@
   }
 }
 @media (max-width: 739px) {
+  .intro-container {
+    padding: 120px 0;
+  }
   .intro-info h1 {
     font-size: 2em;
   }

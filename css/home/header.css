@@ -40,10 +40,61 @@
   transition: 0.3s;
   position: absolute;
 }
+
 .header-menu a:hover,
 a:hover::after {
   width: 100%;
   color: #b3b3b3;
+}
+[data-menu="button"] {
+  display: none;
+}
+@media (max-width: 700px) {
+  .js [data-menu="button"] {
+    display: flex;
+    background: #222;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 10px;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+  }
+  .js [data-menu="button"]::before {
+    margin-right: 4px;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px #ffffff, 0 -4px #ffffff;
+    transition: transform 0.3s;
+  }
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+  .js [data-menu="list"] {
+    text-align: center;
+    display: none;
+    position: absolute;
+    background: #000000;
+    width: 110px;
+    z-index: 10;
+    top: 15px;
+    padding: 60px 0 0 0;
+    right: 0px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  .js [data-menu="list"].active {
+    display: block;
+    animation: show-right 0.3s forwards;
+  }
 }
 @media (max-width: 739px) {
   .header-menu a {
@@ -75,5 +126,15 @@ a:hover::after {
   }
   .header-menu a::after {
     display: none;
+  }
+}
+@keyframes show-right {
+  from {
+    opacity: 0;
+    transform: translate3d(0px, 0, -30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

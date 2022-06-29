@@ -1,4 +1,5 @@
 import { SlideNav } from "./slide.js";
+import initMenuMobile from "./menu-mobile.js";
 
 const slide = new SlideNav(".slide", ".wrapper");
 slide.init();
@@ -23,3 +24,4 @@ function typeWrite(elemento) {
   });
 }
 typeWrite(title);
+initMenuMobile();
